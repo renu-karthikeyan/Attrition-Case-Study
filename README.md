@@ -9,4 +9,5 @@ You will find the following documents within this repository:
 5. HTML of R Code used for analysis
 6. Link to github.io page with case study analysis attached (https://renu-karthikeyan.github.io/projects/CaseStudy2RK/)
 7. Link to Shiny App (https://renu-karthikeyan.shinyapps.io/Attempt2/)
+8. Files with predictions. Predictions on Attrition were made using Naive Bayes and KNN. The final and "best" version of the Attrition Model has "FINAL" in the title. Predictions on salary were made with a linear regression model. 
 
