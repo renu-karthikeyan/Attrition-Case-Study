@@ -3,7 +3,7 @@ This is a repository for files from the DS 6306 final project on employee data f
 
 You will find the following documents within this repository:
 1. AWS S3 bucket locations to data sets (https://s3.console.aws.amazon.com/s3/buckets/msdsds6306?region=us-east-2&tab=objects#)
-2. Video recording of analysis: () 
+2. Video recording of analysis: (https://youtu.be/mb4ZBUnIFnw?si=g4LwAxBCOy6K-yh9) 
 3. Powerpoint of findings and analysis
 4. R Markdown file of code used for analysis
 5. HTML of R Code used for analysis
