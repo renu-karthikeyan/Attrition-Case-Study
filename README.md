@@ -7,4 +7,6 @@ You will find the following documents within this repository:
 3. Powerpoint of findings and analysis
 4. R Markdown file of code used for analysis
 5. HTML of R Code used for analysis
+6. Link to github.io page with case study analysis attached (https://renu-karthikeyan.github.io/projects/CaseStudy2RK/)
+7. Link to Shiny App (https://renu-karthikeyan.shinyapps.io/Attempt2/)
 
