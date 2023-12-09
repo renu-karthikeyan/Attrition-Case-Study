@@ -265,9 +265,9 @@ Overall, Model 2 appears to have a high R-squared value, indicating a good fit t
 set.seed(1234)
 TrainObs = sample(seq(1,dim(Attritiondata)[1]),round(.8*dim(Attritiondata)[1]),replace = FALSE)
 SalaryTrain = Attritiondata[TrainObs,]
-SalaryTrain
+head(SalaryTrain,5)
 SalaryTest = Attritiondata[-TrainObs,]
-SalaryTest
+head(SalaryTest,5)
 
 Model1_fit <- lm(MonthlyIncome ~ ., data = Attritiondata)
 summary(Model1_fit)
@@ -287,9 +287,9 @@ summary(Model1_fit)
     {
       TrainObs = sample(seq(1,dim(Attritiondata)[1]),round(.8*dim(Attritiondata)[1]),replace = FALSE)
       SalaryTrain = Attritiondata[TrainObs,]
-      SalaryTrain
+      head(SalaryTrain,5)
       SalaryTest = Attritiondata[-TrainObs,]
-      SalaryTest
+      head(SalaryTest,5)
       Model1_fit <- lm(MonthlyIncome ~ ., data = SalaryTrain)
       Model1_Preds = predict(Model1_fit, newdata = SalaryTest)
       
@@ -313,6 +313,8 @@ summary(Model1_fit)
     mean(MSPEHolderModel2)
     mean(RMSEHolderModel1)
     mean(RMSEHolderModel2)
+    AIC(Model1_fit)
+    AIC(Model2_fit)
     
 ```
 - Data was split 80/20 – for training and testing
