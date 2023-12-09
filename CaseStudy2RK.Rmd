@@ -49,14 +49,10 @@ library(fastDummies)
 # Set AWS credentials, and Load in Datasets from Amazon S3 Bucket
 Here, loading in the data from the AWS S3 Bucket. I did some slight clean up of the data, to exclude the "Over18" column in the original data set and the Attrition test data set. The column name for ID in the No Salary data set was not the same, so I adjusted that. Also, I did a check for any missing values. There are no missing values in any of the data sets, so there is no need for imputing or deleting of rows. 
 ```{r}
-Sys.setenv("AWS_ACCESS_KEY_ID" = "AKIATJ37QGJGSK4DGWN4" ,
-           "AWS_SECRET_ACCESS_KEY" = "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", 
-           "AWS_DEFAULT_REGION" = "us-east-2")
-
 # Load the Attrition data set from S3
-s3_path <- "s3://msds.ds.6306.2/CaseStudy2-data.csv"
+#s3_path <- "s3://msds.ds.6306.2/CaseStudy2-data.csv"
 # Read the Attrition Data CSV file from S3
-Attritiondata <- aws.s3::s3read_using(read_csv, object = s3_path)
+Attritiondata <- read.table(textConnection(getURL("https://msdsds6306.s3.us-east-2.amazonaws.com/CaseStudy2-data.csv")), sep =",", header =T)
 head(Attritiondata,5)
 #summary(Attritiondata)
 vis_miss(Attritiondata) #checking for no missing values
